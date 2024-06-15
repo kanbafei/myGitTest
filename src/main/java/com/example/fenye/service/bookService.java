@@ -7,4 +7,6 @@ import java.util.List;
 public interface bookService {
     List<Book> getBooks(int n, int m);
     Book get(int n);
+
+    void add();
 }

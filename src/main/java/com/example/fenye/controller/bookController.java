@@ -5,6 +5,7 @@ import com.example.fenye.service.bookService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,8 +25,11 @@ public class bookController {
         return s;
     }
     @GetMapping("/ss")
+    @Transactional(rollbackFor = {Exception.class})
     public String get(){
-        return "hello world";
+        bookService.add();
+        int n=10/0;//测试声明式事务
+        return "OK";
     }
     @GetMapping("/ww")
     public Book ss(int n){

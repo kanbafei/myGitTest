@@ -1,6 +1,7 @@
 package com.example.fenye.dao;
 
 import com.example.fenye.pojo.Book;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -13,4 +14,6 @@ public interface bookMapper {
     List<Book> getBooks(@Param("n") int n, @Param("m") int m);
     @Select("select * from books where bookID=#{n}")
     Book get(int n);
+    @Insert("insert into t1 (name,age) values ('sam',10)")
+    void add();
 }

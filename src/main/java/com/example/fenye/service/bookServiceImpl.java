@@ -21,4 +21,10 @@ public class bookServiceImpl implements bookService{
     public Book get(int n) {
         return bookMapper.get(n);
     }
+
+    @Override
+    public void add() {
+        System.out.println("方法执行了");
+        bookMapper.add();
+    }
 }
