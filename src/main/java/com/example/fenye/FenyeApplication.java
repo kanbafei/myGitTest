@@ -15,6 +15,7 @@ public class FenyeApplication {
         System.out.println("从网页修改文档");
         System.out.println("----------------------------------------------------------------");
         System.out.println("从idea修改文档");
+        System.out.println("结束修改版本发布");
         SpringApplication.run(FenyeApplication.class, args);
     }
 
