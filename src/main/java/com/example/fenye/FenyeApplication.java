@@ -11,6 +11,8 @@ public class FenyeApplication {
         System.out.println("master test");
         System.out.println("----------------------------------------------------------------");
         System.out.println("hot-test 分支");
+        System.out.println("----------------------------------------------------------------");
+        System.out.println("从网页修改文档");
         SpringApplication.run(FenyeApplication.class, args);
     }
 
