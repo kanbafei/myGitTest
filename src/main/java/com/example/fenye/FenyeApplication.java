@@ -8,6 +8,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class FenyeApplication {
     public static void main(String[] args) {
+        System.out.println("hot-test 分支");
+        System.out.println("----------------");
         SpringApplication.run(FenyeApplication.class, args);
     }
 
