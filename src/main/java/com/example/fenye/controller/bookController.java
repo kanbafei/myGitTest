@@ -1,6 +1,7 @@
 package com.example.fenye.controller;
 
 import com.example.fenye.pojo.Book;
+import com.example.fenye.pojo.User;
 import com.example.fenye.service.bookService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @CrossOrigin
@@ -36,5 +38,12 @@ public class bookController {
         Book book=bookService.get(n);
         System.out.println(book);
         return book;
+    }
+    @Autowired
+    User user;
+    @GetMapping("/user")
+    public String user(){
+        String s = user.toString();
+        return s;
     }
 }
